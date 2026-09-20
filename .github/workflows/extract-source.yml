@@ -1,0 +1,34 @@
+name: Extract Neon Dynasty Source
+
+on:
+  push:
+    paths:
+      - "neon_dynasty_source_79.zip"
+      - ".github/workflows/extract-source.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract source package
+        run: |
+          unzip -q neon_dynasty_source_79.zip -d .tmp_neon
+          cp -a .tmp_neon/. .
+          rm -rf .tmp_neon neon_dynasty_source_79.zip
+
+      - name: Commit extracted source
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Extract Neon Dynasty source package" || exit 0
+          git push
