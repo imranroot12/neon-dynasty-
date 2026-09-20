@@ -1,0 +1,19 @@
+{
+  "build": 48,
+  "game": "Neon Dynasty",
+  "provider": "Voltix Games",
+  "grid": "6x5",
+  "target_rtp_percent": 96.0,
+  "max_win_x": 20000,
+  "modes": {
+    "base": {"cost": 1, "book_entries": 100000, "weighted_rtp_percent": 96.00001926933471, "max_observed_x": 314.76},
+    "basic": {"cost": 100, "book_entries": 10000, "weighted_rtp_percent": 95.99999782863212, "max_observed_x": 3155.29},
+    "super": {"cost": 200, "book_entries": 10000, "weighted_rtp_percent": 96.00000004792599, "max_observed_x": 8689.01},
+    "mystery": {"cost": 500, "book_entries": 10000, "weighted_rtp_percent": 95.99999999999178, "max_observed_x": 20000.0}
+  },
+  "payout_lookup_matches": {"base": 0, "basic": 0, "super": 0, "mystery": 0},
+  "rgs_format_verification": "PASS_WITH_MYSTERY_VOLATILITY_WARNING",
+  "official_rust_optimizer": "NOT_RUN_RUST_TOOLCHAIN_UNAVAILABLE",
+  "web_sdk_full_build": "NOT_RUN",
+  "stake_approval": "NOT_SUBMITTED"
+}

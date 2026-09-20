@@ -1,0 +1,33 @@
+{
+  "build": "65",
+  "ok": true,
+  "errors": [],
+  "modes": {
+    "base": {
+      "book_rows": 100000,
+      "lut_rows": 100000,
+      "missing_ids": 0,
+      "payout_mismatches": 0
+    },
+    "basic": {
+      "book_rows": 10000,
+      "lut_rows": 10000,
+      "missing_ids": 0,
+      "payout_mismatches": 0
+    },
+    "super": {
+      "book_rows": 10000,
+      "lut_rows": 10000,
+      "missing_ids": 0,
+      "payout_mismatches": 0
+    },
+    "mystery": {
+      "book_rows": 10000,
+      "lut_rows": 10000,
+      "missing_ids": 0,
+      "payout_mismatches": 0
+    }
+  },
+  "optimizer_certified": false,
+  "rgs_verified": false
+}

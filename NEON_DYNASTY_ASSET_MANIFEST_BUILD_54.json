@@ -1,0 +1,220 @@
+{
+  "count": 43,
+  "assets": [
+    {
+      "path": "animations/S.svg",
+      "bytes": 758,
+      "sha256": "0fba2058d535067850e554478cced72ae3ca7ba3c9e3b9116db967b2c594f4d2"
+    },
+    {
+      "path": "animations/W.svg",
+      "bytes": 755,
+      "sha256": "da082c9b01cfd5a4275dd0afc584491d4858ea72a08e21567025b6266dcb5d0a"
+    },
+    {
+      "path": "animations/anticipation.svg",
+      "bytes": 604,
+      "sha256": "cbe7295399ae04806a70ff1dc146fa95e481b4f7b2c50d6f1d0ed342b01d54ab"
+    },
+    {
+      "path": "animations/bigwin.svg",
+      "bytes": 758,
+      "sha256": "af1c95cdb6abe626007b8872068cff48a359d995a28f6d61f2a8e8c277746218"
+    },
+    {
+      "path": "animations/clusterWin.svg",
+      "bytes": 758,
+      "sha256": "fbedb15e2e8f8820c7792b3571e7e1831534cb2879744e715a81826a790ff67c"
+    },
+    {
+      "path": "animations/explosion.svg",
+      "bytes": 604,
+      "sha256": "eb0f97f7d6312bb66c643438900fd3937d2e44d551afa73cd2a76b002cf4eb14"
+    },
+    {
+      "path": "animations/foregroundAnimation.svg",
+      "bytes": 763,
+      "sha256": "428a3252d828fa524ea4b673cffeac62508411c58c6aff24a3a189e089bf9265"
+    },
+    {
+      "path": "animations/foregroundFeatureAnimation.svg",
+      "bytes": 762,
+      "sha256": "c4427a6405788f0dbfcdf45bef3dd84ac35eed594d657ba07657db0aa6d93022"
+    },
+    {
+      "path": "animations/frame_bg.svg",
+      "bytes": 604,
+      "sha256": "f3cfa2806e1b381a06f8019f6d8ec374efc5cdf0ebbbd05e5f934045c090977a"
+    },
+    {
+      "path": "animations/frame_edge.svg",
+      "bytes": 604,
+      "sha256": "d9901bb0f73334e220d8e0b64cf75f913177b099d94f81417fb96ee45597d75c"
+    },
+    {
+      "path": "animations/fsIntro.svg",
+      "bytes": 761,
+      "sha256": "a04f8bd9b11b95a8171b3157a132a2c82e7c188b89176dacc95dafd69b89e80b"
+    },
+    {
+      "path": "animations/fsIntroNumber.svg",
+      "bytes": 604,
+      "sha256": "5723b6ec1cc77b5f58a790084185de56f7f0c1ac0a552de3e37adfe0fdc7f029"
+    },
+    {
+      "path": "animations/fsOutroNumber.svg",
+      "bytes": 604,
+      "sha256": "5723b6ec1cc77b5f58a790084185de56f7f0c1ac0a552de3e37adfe0fdc7f029"
+    },
+    {
+      "path": "animations/globalMultiplier.svg",
+      "bytes": 761,
+      "sha256": "657a4bd5058d7b7709ccf5e6cf43018b9e055a82265857286712135711e23133"
+    },
+    {
+      "path": "animations/loader.svg",
+      "bytes": 763,
+      "sha256": "8e56250675ef4363a980df035a924d173417c9ce89226d194b98300bf2ff0adf"
+    },
+    {
+      "path": "animations/reelhouse.svg",
+      "bytes": 604,
+      "sha256": "d9901bb0f73334e220d8e0b64cf75f913177b099d94f81417fb96ee45597d75c"
+    },
+    {
+      "path": "animations/transition.svg",
+      "bytes": 757,
+      "sha256": "1ee3438fafeae6b6eb1b836fcb5345615c4da72879f2ac9604d2e878ae6a4109"
+    },
+    {
+      "path": "animations/tumble_multiplier.svg",
+      "bytes": 761,
+      "sha256": "25c955864ef49704245fdaa4580b2cfdfd587246ca942b41352784e3f80aa90c"
+    },
+    {
+      "path": "animations/tumble_win.svg",
+      "bytes": 754,
+      "sha256": "19d290344981876670120e968776c0113e01501438bd916a69a7368f8f5e6956"
+    },
+    {
+      "path": "audio/sounds.json",
+      "bytes": 5770,
+      "sha256": "23b99b66699499253918f971adc5dca2a4c30eeb371b54548f5e2987aac88473"
+    },
+    {
+      "path": "audio/sounds.ogg",
+      "bytes": 77113,
+      "sha256": "db6cc1a7a6adac11a3a68d30bcd63dcdbfed435ec6fd621243185402724c0555"
+    },
+    {
+      "path": "symbols/butterfly.svg",
+      "bytes": 799,
+      "sha256": "8ef45a0047a655490a55b9aaa56e94fcc3f228646b2db4f64e9c50ce64b2d598"
+    },
+    {
+      "path": "symbols/crane.svg",
+      "bytes": 784,
+      "sha256": "8ea93bcd12a4232f729c9b51d4634baa34553df67ada2ab6d00f1aaca7b01f66"
+    },
+    {
+      "path": "symbols/dragon.svg",
+      "bytes": 815,
+      "sha256": "32b61c279d424aa60388d13a509fa6650eb4f85075ce6012d0605a512248c14a"
+    },
+    {
+      "path": "symbols/empress.svg",
+      "bytes": 766,
+      "sha256": "271f21f6b8748d7336098cac665b60012a544a16b029d242fc158ec13af26afe"
+    },
+    {
+      "path": "symbols/fox.svg",
+      "bytes": 830,
+      "sha256": "6861954fd07cbb5ae51de20132a848a60a827c27bb9e0caa2283e33adb9976d5"
+    },
+    {
+      "path": "symbols/jade.svg",
+      "bytes": 791,
+      "sha256": "d050a296ba797b0408f57eeafdf8030068dadaa5a0ae2a6c6c440af2d9e9c652"
+    },
+    {
+      "path": "symbols/koi.svg",
+      "bytes": 803,
+      "sha256": "5d373cdea9f7d5580fc7fb8dfb7de0b95392d64f42e32cd60652505b03e9219e"
+    },
+    {
+      "path": "symbols/mask.svg",
+      "bytes": 778,
+      "sha256": "aad98cc940cf52a698940b957b7552086e03fbdcc31d76117f94ea014c6ca75a"
+    },
+    {
+      "path": "symbols/tiger.svg",
+      "bytes": 787,
+      "sha256": "082e69872c040ba1831f7d2e1e3499149e9689582fa3ac1e5e68816010614414"
+    },
+    {
+      "path": "ui/background.svg",
+      "bytes": 768,
+      "sha256": "22c1e77bb1b0bf7c7cc872709bc689848adeaa190e9d4a4552e88c79b2c8e353"
+    },
+    {
+      "path": "ui/coin.svg",
+      "bytes": 314,
+      "sha256": "a55a79b10c85a22fd3154bde1460702176bee73f766f6eeccdb45a2e54d3c3ca"
+    },
+    {
+      "path": "ui/dragon-meter.svg",
+      "bytes": 550,
+      "sha256": "62401feb7a916fba8decf2465c4d84ec7a3769a7d144a630dd6bb3abf5950a33"
+    },
+    {
+      "path": "ui/frame_bg.svg",
+      "bytes": 314,
+      "sha256": "4b6aa9c37d481e8f72b94dfc4d1bb8c99363bb25d81102a3b7647bf09a74ce74"
+    },
+    {
+      "path": "ui/frame_edge.svg",
+      "bytes": 314,
+      "sha256": "845c4a0efc436a56a1924d5fabdc1d4a810dc3310cc488055f3b55b10b200f5a"
+    },
+    {
+      "path": "ui/freespins.svg",
+      "bytes": 440,
+      "sha256": "5abad33f7d4417098f6140565d96125462043ade668fa0702a0987d95019442f"
+    },
+    {
+      "path": "ui/logo.svg",
+      "bytes": 394,
+      "sha256": "ecde3aacfee430b48b0986215bb4f8f45c6ba7d52fdb24a7adc6fc4c65b026b8"
+    },
+    {
+      "path": "ui/neon-frame.svg",
+      "bytes": 567,
+      "sha256": "b53daa8c8699390a53eba35e39e6eeea15d261e24f926263ed13214653620399"
+    },
+    {
+      "path": "ui/progressBar.svg",
+      "bytes": 314,
+      "sha256": "845c4a0efc436a56a1924d5fabdc1d4a810dc3310cc488055f3b55b10b200f5a"
+    },
+    {
+      "path": "ui/progressBarBackground.svg",
+      "bytes": 314,
+      "sha256": "6464550d5c399e4494bf25fac62ffa326167958ee619833a220a21d74950b02f"
+    },
+    {
+      "path": "ui/progressBarFrame.svg",
+      "bytes": 314,
+      "sha256": "542c8bba4faa78cef7346ba6fdffd85a56d361d621799da661e328ebb74ed2e4"
+    },
+    {
+      "path": "ui/vault.svg",
+      "bytes": 671,
+      "sha256": "5cb62792a0c4d2257dc06ecd305b36e3fdcee3c9ca11d409a9dea27ef72b6a66"
+    },
+    {
+      "path": "ui/winsmall.svg",
+      "bytes": 433,
+      "sha256": "cfe58dc132ead0284ae35640b25b611b109099be3d3f99f9e6eba623e2d804f9"
+    }
+  ]
+}

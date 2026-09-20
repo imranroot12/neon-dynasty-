@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "name": "python",
+      "ok": true,
+      "detail": "3.13.5"
+    },
+    {
+      "name": "node",
+      "ok": true,
+      "detail": "/opt/nvm/versions/node/v22.16.0/bin/node"
+    },
+    {
+      "name": "zstd",
+      "ok": true,
+      "detail": "/usr/bin/zstd"
+    },
+    {
+      "name": "cargo",
+      "ok": false,
+      "detail": "missing"
+    },
+    {
+      "name": "pnpm",
+      "ok": false,
+      "detail": "missing"
+    },
+    {
+      "name": "publication_book_base",
+      "ok": true,
+      "detail": "[PosixPath('/mnt/data/b53work/math/neon_dynasty/library/publish_files/books_base.jsonl.zst')]"
+    },
+    {
+      "name": "publication_book_basic",
+      "ok": true,
+      "detail": "[PosixPath('/mnt/data/b53work/math/neon_dynasty/library/publish_files/books_basic.jsonl.zst')]"
+    },
+    {
+      "name": "publication_book_super",
+      "ok": true,
+      "detail": "[PosixPath('/mnt/data/b53work/math/neon_dynasty/library/publish_files/books_super.jsonl.zst')]"
+    },
+    {
+      "name": "publication_book_mystery",
+      "ok": true,
+      "detail": "[PosixPath('/mnt/data/b53work/math/neon_dynasty/library/publish_files/books_mystery.jsonl.zst')]"
+    },
+    {
+      "name": "sample_asset_quarantine",
+      "ok": false,
+      "detail": "web/neon-dynasty/static/assets/sprites/winSmall/MM_Localisation_winsmall.json; web/neon-dynasty/static/assets/sprites/winSmall/MM_Localisation_winsmall.png; web/neon-dynasty/static/assets/sprites/winSmall/MM_Localisation_winsmall.webp; web/neon-dynasty/static/assets/sprites/pressToContinueText/MM_pressanywhere.png; web/neon-dynasty/static/assets/sprites/pressToContinueText/MM_pressanywhere.webp; web/neon-dynasty/static/assets/sprites/pressToContinueText/MM_pressanywhere.json; web/neon-dynasty/static/assets/spines/bonusButton/buy_button.webp; web/neon-dynasty/static/assets/spines/bonusButton/buy_button.atlas; web/neon-dynasty/static/assets/spines/bonusButton/buy_button.json; web/neon-dynasty/static/assets/spines/bonusButton/buy_button.png; web/neon-dynasty/static/assets/spines/foregroundAnimation/mm_bg.webp; web/neon-dynasty/static/assets/spines/foregroundAnimation/mm_bg.json"
+    }
+  ],
+  "ready": false
+}

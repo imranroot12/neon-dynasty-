@@ -1,0 +1,17 @@
+{
+  "web_sdk_stack": [
+    "Svelte 5",
+    "PixiJS 8",
+    "TurboRepo"
+  ],
+  "documented_node": "22.16.0",
+  "documented_pnpm": "10.5.0",
+  "math_sdk_python": ">=3.12",
+  "math_optimizer": "Rust/Cargo",
+  "required_publication_artifacts": [
+    "books",
+    "lookup-tables",
+    "index"
+  ],
+  "note": "Versions are documented upstream requirements; final verification must run in the actual SDK environment."
+}

@@ -1,0 +1,18 @@
+{
+  "build": "64",
+  "asset_count": 61,
+  "audio_count": 5,
+  "explicit_missing_asset_references": [],
+  "suspicious_sample_or_placeholder_files": [],
+  "feature_presence": {
+    "cluster": true,
+    "tumble": true,
+    "wild": true,
+    "mystery": true,
+    "multiplier": true,
+    "freespin": true,
+    "buy": true,
+    "dragon": true
+  },
+  "ok": true
+}
