@@ -1,7 +1,7 @@
 """Neon Dynasty optimization parameters for the official Engine Math SDK."""
 from optimization_program.optimization_config import (
     ConstructScaling, ConstructParameters, ConstructConditions,
-    ConstructFenceBias, verify_optimization_input,
+    verify_optimization_input,
 )
 from game_config import GameConfig
 
