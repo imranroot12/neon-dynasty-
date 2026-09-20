@@ -54,10 +54,9 @@ jobs:
             git -C .vendor/web-sdk rev-parse HEAD
           } | tee sdk-revisions.txt
 
-      - name: Verify SDK compatibility
-        working-directory: game
+            - name: Verify SDK compatibility
         run: |
-          python3 tools/official_sdk_compatibility_preflight.py
+          python3 game/tools/official_sdk_compatibility_preflight.py
 
       - name: Setup Python
         uses: actions/setup-python@v5
