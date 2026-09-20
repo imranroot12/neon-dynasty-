@@ -28,7 +28,7 @@ class GameConfig(Config):
         self.wincap = 20000.0
         self.win_type = "cluster"
         self.rtp = 0.96
-        self.construct_paths()
+        self.construct_paths(self.game_id)
 
         self.num_reels = 6
         self.num_rows = [5] * 6
