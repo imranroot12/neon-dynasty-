@@ -21,9 +21,35 @@ jobs:
 
       - name: Extract source package
         run: |
-          unzip -q neon_dynasty_source_79.zip -d .tmp_neon
-          cp -a .tmp_neon/. .
-          rm -rf .tmp_neon neon_dynasty_source_79.zip
+          python3 - <<'PY'
+          import shutil
+          import zipfile
+          from pathlib import Path
+
+          archive = Path("neon_dynasty_source_79.zip")
+          temp = Path(".tmp_neon")
+
+          with zipfile.ZipFile(archive) as z:
+              z.extractall(temp)
+
+          for item in temp.iterdir():
+              if item.name == ".github":
+                  continue
+              target = Path(item.name)
+              if target.exists():
+                  if target.is_dir():
+                      shutil.copytree(item, target, dirs_exist_ok=True)
+                  else:
+                      shutil.copy2(item, target)
+              else:
+                  if item.is_dir():
+                      shutil.copytree(item, target)
+                  else:
+                      shutil.copy2(item, target)
+
+          shutil.rmtree(temp)
+          archive.unlink()
+          PY
 
       - name: Commit extracted source
         run: |
