@@ -1,0 +1,162 @@
+name: Neon Dynasty - Clean Official Build
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout game
+        uses: actions/checkout@v4
+        with:
+          path: game
+
+      - name: Checkout Math SDK
+        uses: actions/checkout@v4
+        with:
+          repository: engineio/math-sdk
+          path: .vendor/math-sdk
+
+      - name: Checkout Web SDK
+        uses: actions/checkout@v4
+        with:
+          repository: engineio/web-sdk
+          path: .vendor/web-sdk
+
+      - name: Show SDK revisions
+        run: |
+          echo "Math SDK:"
+          git -C .vendor/math-sdk rev-parse HEAD
+          echo "Web SDK:"
+          git -C .vendor/web-sdk rev-parse HEAD
+
+      - name: Check game layout
+        run: |
+          python3 game/tools/official_layout_preflight.py
+
+      - name: Check SDK compatibility
+        run: |
+          python3 game/tools/official_sdk_compatibility_preflight.py
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install zstd
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zstd
+
+      - name: Install Math SDK
+        working-directory: .vendor/math-sdk
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+          if [ -f pyproject.toml ]; then
+            pip install -e .
+          fi
+
+      - name: Install Neon Dynasty Math game
+        run: |
+          rm -rf .vendor/math-sdk/games/neon_dynasty
+          mkdir -p .vendor/math-sdk/games/neon_dynasty
+          cp -a game/math/neon_dynasty/. \
+            .vendor/math-sdk/games/neon_dynasty/
+
+      - name: Run official Math SDK
+        working-directory: .vendor/math-sdk
+        run: |
+          python games/neon_dynasty/run.py
+
+      - name: Verify Math completion
+        run: |
+          grep -Rqs "OFFICIAL_PIPELINE_COMPLETE" \
+            .vendor/math-sdk
+
+      - name: Find publication
+        id: publication
+        run: |
+          if [ -d ".vendor/math-sdk/games/neon_dynasty/library/publish_files" ]; then
+            echo "path=.vendor/math-sdk/games/neon_dynasty/library/publish_files" >> "$GITHUB_OUTPUT"
+          elif [ -d ".vendor/math-sdk/library/publish_files" ]; then
+            echo "path=.vendor/math-sdk/library/publish_files" >> "$GITHUB_OUTPUT"
+          else
+            echo "Publication files not found."
+            exit 1
+          fi
+
+      - name: Verify publication
+        run: |
+          python3 game/tools/verify_publication.py \
+            "${{ steps.publication.outputs.path }}"
+
+      - name: Engine publication preflight
+        run: |
+          python3 game/tools/engine_publication_preflight.py \
+            "${{ steps.publication.outputs.path }}"
+
+      - name: Install Neon Dynasty Web game
+        run: |
+          rm -rf .vendor/web-sdk/apps/neon-dynasty
+          mkdir -p .vendor/web-sdk/apps/neon-dynasty
+          cp -a game/web/neon-dynasty/. \
+            .vendor/web-sdk/apps/neon-dynasty/
+
+      - name: Enable pnpm
+        working-directory: .vendor/web-sdk
+        run: |
+          corepack enable
+          corepack prepare pnpm@10.5.0 --activate
+          pnpm --version
+
+      - name: Install Web SDK
+        working-directory: .vendor/web-sdk
+        run: |
+          pnpm install --frozen-lockfile
+
+      - name: Build Neon Dynasty frontend
+        working-directory: .vendor/web-sdk
+        run: |
+          pnpm run build --filter=neon-dynasty
+
+      - name: Package Math publication
+        run: |
+          mkdir -p release/math
+          cp -a "${{ steps.publication.outputs.path }}/." \
+            release/math/
+
+      - name: Package frontend
+        run: |
+          if [ -d ".vendor/web-sdk/apps/neon-dynasty/dist" ]; then
+            mkdir -p release/web
+            cp -a .vendor/web-sdk/apps/neon-dynasty/dist/. release/web/
+          elif [ -d ".vendor/web-sdk/apps/neon-dynasty/build" ]; then
+            mkdir -p release/web
+            cp -a .vendor/web-sdk/apps/neon-dynasty/build/. release/web/
+          else
+            echo "Frontend build output not found."
+            exit 1
+          fi
+
+      - name: Upload Neon Dynasty build
+        uses: actions/upload-artifact@v4
+        with:
+          name: neon-dynasty-official-build
+          path: release
+          if-no-files-found: error
