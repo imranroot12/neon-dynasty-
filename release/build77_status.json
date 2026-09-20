@@ -1,0 +1,12 @@
+{
+  "build": 77,
+  "status": "release_candidate_pending_official_execution",
+  "changes": [
+    "fixed_archive_root_layout",
+    "added_upstream_sdk_interface_preflight"
+  ],
+  "official_math_execution_verified_here": false,
+  "official_optimizer_verified_here": false,
+  "official_web_build_verified_here": false,
+  "stake_engine_rgs_staging_verified_here": false
+}

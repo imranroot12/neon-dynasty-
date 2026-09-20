@@ -1,0 +1,46 @@
+{
+  "base": {
+    "book_rows": 100000,
+    "lut_rows": 100000,
+    "missing_lut_payouts": 0,
+    "weighted_rtp": 0.09600000334915591,
+    "max_book_multiplier": 314.8,
+    "max_lut_multiplier": 314.8,
+    "under_cap": true,
+    "books_sha256": "8231694c569328cee7db0f55c7a411c9463af3c142e45167d0723b14049aab7d",
+    "lut_sha256": "bee7f05abb9de7dea245960e555d90295fbe721fb2cac21e0b3c53f7af8c2d82"
+  },
+  "basic": {
+    "book_rows": 10000,
+    "lut_rows": 10000,
+    "missing_lut_payouts": 0,
+    "weighted_rtp": 0.09600000019748375,
+    "max_book_multiplier": 3155.3,
+    "max_lut_multiplier": 3155.3,
+    "under_cap": true,
+    "books_sha256": "53e55a0212624e4b1bfbe39d9232ac5c850fd3b806d5e8c216f4e1746ec3c648",
+    "lut_sha256": "ab32b74b17e6610a8241b9abd2f5d37d5227ce10cff9e34532e9995384f2978a"
+  },
+  "super": {
+    "book_rows": 10000,
+    "lut_rows": 10000,
+    "missing_lut_payouts": 0,
+    "weighted_rtp": 0.095999999928111,
+    "max_book_multiplier": 8689.0,
+    "max_lut_multiplier": 8689.0,
+    "under_cap": true,
+    "books_sha256": "69ab9e4574a2ba608beae94924feeb0a8ea7baacdeb3147341f3c483ab03d0ca",
+    "lut_sha256": "a9208c1333c764016aef97f7ecebd8ae58dc50d8d982bda3467de3af28e56d89"
+  },
+  "mystery": {
+    "book_rows": 10000,
+    "lut_rows": 10000,
+    "missing_lut_payouts": 0,
+    "weighted_rtp": 0.09600000000879569,
+    "max_book_multiplier": 20000.0,
+    "max_lut_multiplier": 20000.0,
+    "under_cap": true,
+    "books_sha256": "262b9510502adbc98e8680331358fb53769c1487c9e3dd71376b741691c28024",
+    "lut_sha256": "01118030b95cd97ef433a59ef9359f4ee26a3354214c399f19afc821e8208328"
+  }
+}

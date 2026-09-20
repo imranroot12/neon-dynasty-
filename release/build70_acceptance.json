@@ -1,0 +1,25 @@
+{
+  "build": 70,
+  "status": "execution_ready_not_certified",
+  "required_runtime_modes": [
+    "BASE",
+    "BASIC",
+    "SUPER",
+    "MYSTERY"
+  ],
+  "minimum_publication_rows_per_mode": 100000,
+  "gates": [
+    "official_math_sdk",
+    "official_optimizer_if_configured",
+    "books_generated_from_fresh_run",
+    "lookup_tables_generated_from_fresh_run",
+    "book_lookup_integrity",
+    "web_sdk_production_build",
+    "rgs_staging_authentication",
+    "real_play_per_mode",
+    "replay_resume",
+    "final_sha256_manifest"
+  ],
+  "credential_policy": "no credentials or session IDs committed",
+  "certification": false
+}

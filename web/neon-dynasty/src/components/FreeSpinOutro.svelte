@@ -1,0 +1,9 @@
+<script lang="ts" module>
+import type {WinLevelData} from '../game/winLevelMap'; export type EmitterEventFreeSpinOutro={type:'freeSpinOutroShow'}|{type:'freeSpinOutroHide'}|{type:'freeSpinOutroCountUp';amount:number;winLevelData:WinLevelData};
+</script>
+<script lang="ts">
+ import {Sprite,Text} from 'pixi-svelte'; import {FadeContainer,WinCountUpProvider} from 'components-pixi'; import {CanvasSizeRectangle} from 'components-layout'; import {OnMount} from 'components-shared'; import {getContext} from '../game/context'; import FreeSpinAnimation from './FreeSpinAnimation.svelte'; import PressToContinue from './PressToContinue.svelte'; import WinCoins from './WinCoins.svelte';
+ const context=getContext(); let show=$state(false); let amount=$state(0); let winLevelData=$state<WinLevelData>(); let oncomplete=$state(()=>{});
+ context.eventEmitter.subscribeOnMount({freeSpinOutroShow:()=>show=true,freeSpinOutroHide:()=>show=false,freeSpinOutroCountUp:async e=>{amount=e.amount;winLevelData=e.winLevelData;}});
+</script>
+<FadeContainer {show}>{#if winLevelData}<WinCountUpProvider {amount} duration={winLevelData.presentDuration} oncomplete={()=>oncomplete()}>{#snippet children({countUpAmount,startCountUp,finishCountUp,countUpCompleted})}<OnMount onmount={()=>startCountUp()}/><CanvasSizeRectangle backgroundColor={0x000000} backgroundAlpha={.55}/><FreeSpinAnimation>{#snippet children({sizes})}<Sprite key="fsOutroNumber" anchor={.5} width={sizes.width*.7} height={sizes.height*.5}/><Text anchor={.5} y={-20} text={`${Math.round(countUpAmount)}`} style={{fontFamily:'Arial',fontSize:50,fill:0xffffff,fontWeight:'800'}}/></snippet></FreeSpinAnimation><WinCoins emit={!countUpCompleted} levelAlias={winLevelData.alias}/><PressToContinue onpress={()=>countUpCompleted?oncomplete():finishCountUp()}/>{/snippet}</WinCountUpProvider>{/if}</FadeContainer>

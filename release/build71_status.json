@@ -1,0 +1,15 @@
+{
+  "build": 71,
+  "status": "execution_ready_not_certified",
+  "publication_modes": [
+    "BASE",
+    "BASIC",
+    "SUPER",
+    "MYSTERY"
+  ],
+  "minimum_books_per_mode": 100000,
+  "requires_real_staging": true,
+  "requires_official_math_sdk": true,
+  "requires_official_web_sdk_build": true,
+  "certified": false
+}

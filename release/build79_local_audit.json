@@ -1,0 +1,49 @@
+{
+  "build": 79,
+  "status": "PASS",
+  "official_execution_verified_here": false,
+  "official_optimizer_verified_here": false,
+  "rgs_staging_verified_here": false,
+  "checks": [
+    {
+      "name": "math_source",
+      "status": "PASS",
+      "detail": "math/neon_dynasty/run.py"
+    },
+    {
+      "name": "web_source",
+      "status": "PASS",
+      "detail": "web/neon-dynasty/package.json"
+    },
+    {
+      "name": "official_workflow",
+      "status": "PASS",
+      "detail": ".github/workflows/neon-dynasty-official-execution.yml"
+    },
+    {
+      "name": "official_math_sdk_checkout",
+      "status": "PASS",
+      "detail": "workflow must checkout official Math SDK"
+    },
+    {
+      "name": "official_web_sdk_checkout",
+      "status": "PASS",
+      "detail": "workflow must checkout official Web SDK"
+    },
+    {
+      "name": "optimizer_gate",
+      "status": "PASS",
+      "detail": "workflow must require optimization"
+    },
+    {
+      "name": "publication_gate",
+      "status": "PASS",
+      "detail": "workflow must verify publication output"
+    },
+    {
+      "name": "credential_scan",
+      "status": "PASS",
+      "detail": "no common credential patterns found"
+    }
+  ]
+}

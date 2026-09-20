@@ -1,0 +1,13 @@
+{
+  "build": 73,
+  "status": "official-execution-ready",
+  "certified": false,
+  "certification_requires": [
+    "fresh official Math SDK execution",
+    "100k+ outcomes in BASE/BASIC/SUPER/MYSTERY",
+    "book_lookup_integrity_pass",
+    "official Web SDK production build",
+    "real Stake Engine staging/RGS tests"
+  ],
+  "workflow": ".github/workflows/neon-dynasty-official-execution.yml"
+}

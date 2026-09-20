@@ -1,0 +1,30 @@
+{
+  "base": {
+    "rows": 100000,
+    "zero_rows": 76360,
+    "zero_weight": 13389244,
+    "weighted_average_multiplier": 0.9600000334915592,
+    "weighted_rtp": 0.9600000334915592
+  },
+  "basic": {
+    "rows": 10000,
+    "zero_rows": 484,
+    "zero_weight": 190587336,
+    "weighted_average_multiplier": 96.00000019748374,
+    "weighted_rtp": 0.9600000019748375
+  },
+  "super": {
+    "rows": 10000,
+    "zero_rows": 220,
+    "zero_weight": 410792685,
+    "weighted_average_multiplier": 191.999999856222,
+    "weighted_rtp": 0.9599999992811099
+  },
+  "mystery": {
+    "rows": 10000,
+    "zero_rows": 378,
+    "zero_weight": 224787511,
+    "weighted_average_multiplier": 480.0000000439785,
+    "weighted_rtp": 0.960000000087957
+  }
+}

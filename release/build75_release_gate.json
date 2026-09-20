@@ -1,0 +1,32 @@
+{
+  "build": 75,
+  "status": "release_candidate_pending_official_execution",
+  "static_package_ready": true,
+  "official_math_execution_verified_here": false,
+  "official_optimizer_verified_here": false,
+  "official_web_build_verified_here": false,
+  "stake_engine_rgs_staging_verified_here": false,
+  "publication_contract": {
+    "index": "index.json",
+    "events_extension": ".jsonl.zst",
+    "lookup_extension": ".csv",
+    "required_book_fields": [
+      "id",
+      "events",
+      "payoutMultiplier"
+    ],
+    "required_lookup_fields": [
+      "id",
+      "probability",
+      "payoutMultiplier"
+    ]
+  },
+  "required_final_evidence": [
+    "fresh official Math SDK output",
+    "book/lookup payout identity",
+    "100k+ outcomes per supported mode",
+    "official Web SDK production build",
+    "real Stake Engine staging session",
+    "real RGS play and replay/resume checks"
+  ]
+}

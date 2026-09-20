@@ -1,0 +1,19 @@
+{
+  "build": 74,
+  "status": "engine-upload-ready",
+  "certified": false,
+  "new_preflight": "tools/engine_publication_preflight.py",
+  "publication_contract": {
+    "required_index": "index.json",
+    "required_per_mode": [
+      "events",
+      "weights"
+    ],
+    "csv_columns": [
+      "id",
+      "probability_or_weight",
+      "payoutMultiplier"
+    ]
+  },
+  "external_validation_required": true
+}

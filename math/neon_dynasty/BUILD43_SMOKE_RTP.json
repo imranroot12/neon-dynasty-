@@ -1,0 +1,38 @@
+[
+  {
+    "mode": "base",
+    "simulations": 2000,
+    "cost": 1.0,
+    "empirical_rtp": 0.95917,
+    "max_observed_x": 57.66,
+    "mean_payout_x": 0.95917,
+    "p95_payout_x": 5.8
+  },
+  {
+    "mode": "basic",
+    "simulations": 2000,
+    "cost": 100.0,
+    "empirical_rtp": 0.95290215,
+    "max_observed_x": 2901.67,
+    "mean_payout_x": 95.290215,
+    "p95_payout_x": 352.63
+  },
+  {
+    "mode": "super",
+    "simulations": 2000,
+    "cost": 200.0,
+    "empirical_rtp": 0.95962365,
+    "max_observed_x": 3846.13,
+    "mean_payout_x": 191.92473,
+    "p95_payout_x": 701.99
+  },
+  {
+    "mode": "mystery",
+    "simulations": 2000,
+    "cost": 500.0,
+    "empirical_rtp": 0.96144186,
+    "max_observed_x": 20000.0,
+    "mean_payout_x": 480.72093,
+    "p95_payout_x": 1646.04
+  }
+]

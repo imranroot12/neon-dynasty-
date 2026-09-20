@@ -1,0 +1,118 @@
+{
+    "workingName": "Neon Dynasty",
+    "frontendConfig": {
+        "file": "fe_config.json",
+        "sha256": "0e40ba204a2c73573b304637d432a0b5827d9c07438945484f2ee37a148c2499"
+    },
+    "gameID": "neon_dynasty",
+    "rtp": 96.0,
+    "betDenomination": 1000,
+    "minDenomination": 10,
+    "providerNumber": 0,
+    "standardForceFile": {
+        "file": "force.json",
+        "sha256": "0707bab7eefd53b86705c008ff316a1f355beb569376ea74227b0a0ada1a2dd0"
+    },
+    "bookShelfConfig": [
+        {
+            "name": "base",
+            "tables": [
+                {
+                    "file": "lookUpTable_base_0.csv",
+                    "sha256": "85446c85cd54ea45a79e604aa99dcfaa0e48664ea621c465a2bc236bd26b072d"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.96,
+            "std": 3.0,
+            "bookLength": 100000,
+            "feature": false,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 20000.0,
+            "booksFile": {
+                "file": "books_base.jsonl.zst",
+                "sha256": "8231694c569328cee7db0f55c7a411c9463af3c142e45167d0723b14049aab7d"
+            },
+            "forceFile": {
+                "file": "force_record_base.json",
+                "sha256": "1916c2c690053a194b9e6db990814d0da25d740faf7db1a2e28f7d513947f612"
+            }
+        },
+        {
+            "name": "basic",
+            "tables": [
+                {
+                    "file": "lookUpTable_basic_0.csv",
+                    "sha256": "c6d52b143f8c54eb22c11a5dba4749e9f3ea765af983f7ca6917b1b53ce20dad"
+                }
+            ],
+            "cost": 100.0,
+            "rtp": 0.96,
+            "std": 1.71,
+            "bookLength": 10000,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 20000.0,
+            "booksFile": {
+                "file": "books_basic.jsonl.zst",
+                "sha256": "53e55a0212624e4b1bfbe39d9232ac5c850fd3b806d5e8c216f4e1746ec3c648"
+            },
+            "forceFile": {
+                "file": "force_record_basic.json",
+                "sha256": "53788086df05734f4ec72f2f29edae9bf9556588a6341f86136b62801621f232"
+            }
+        },
+        {
+            "name": "super",
+            "tables": [
+                {
+                    "file": "lookUpTable_super_0.csv",
+                    "sha256": "a8012ef424625dd8d754731dc888c674519355684f4b63ea332cf197d43347dc"
+                }
+            ],
+            "cost": 200.0,
+            "rtp": 0.96,
+            "std": 1.56,
+            "bookLength": 10000,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 20000.0,
+            "booksFile": {
+                "file": "books_super.jsonl.zst",
+                "sha256": "69ab9e4574a2ba608beae94924feeb0a8ea7baacdeb3147341f3c483ab03d0ca"
+            },
+            "forceFile": {
+                "file": "force_record_super.json",
+                "sha256": "c13f4d941bce1920406686c562bf8cd4b4d9d25fd68b7801d5a9f4127211df7a"
+            }
+        },
+        {
+            "name": "mystery",
+            "tables": [
+                {
+                    "file": "lookUpTable_mystery_0.csv",
+                    "sha256": "22a6a5bfaa4136a1caaf3e4cc46f3cda16b1069461d94c452df49a5c9dc1f898"
+                }
+            ],
+            "cost": 500.0,
+            "rtp": 0.96,
+            "std": 2.61,
+            "bookLength": 10000,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 20000.0,
+            "booksFile": {
+                "file": "books_mystery.jsonl.zst",
+                "sha256": "262b9510502adbc98e8680331358fb53769c1487c9e3dd71376b741691c28024"
+            },
+            "forceFile": {
+                "file": "force_record_mystery.json",
+                "sha256": "237f954a8699abd82242156629bd5c4e49c9c47cc737a42b6adfbf53e161f2d2"
+            }
+        }
+    ]
+}

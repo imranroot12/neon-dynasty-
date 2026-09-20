@@ -1,0 +1,33 @@
+{
+  "build": 72,
+  "execution_model": "official_engine_environment",
+  "static_environment_may_not_certify": true,
+  "math": {
+    "sdk": "engineio/math-sdk",
+    "python": ">=3.12",
+    "cargo_required_for_optimizer": true,
+    "required_modes": [
+      "BASE",
+      "BASIC",
+      "SUPER",
+      "MYSTERY"
+    ],
+    "minimum_rows_each_mode": 100000,
+    "required_publication_files": [
+      "books",
+      "lookup_tables",
+      "index"
+    ]
+  },
+  "web": {
+    "sdk": "engineio/web-sdk",
+    "required_production_build": true
+  },
+  "rgs": {
+    "required_staging_session": true,
+    "required_authentication": true,
+    "required_real_play": true,
+    "required_replay_resume": true
+  },
+  "final_status": "not_certified_until_all_evidence_exists"
+}

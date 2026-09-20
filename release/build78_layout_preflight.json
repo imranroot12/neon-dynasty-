@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "missing": [],
+  "math_source": "math/neon_dynasty",
+  "web_source": "web/neon-dynasty",
+  "official_math_destination": ".vendor/math-sdk/games/neon_dynasty",
+  "official_web_destination": ".vendor/web-sdk/apps/neon-dynasty"
+}

@@ -1,0 +1,7 @@
+{
+  "build": 72,
+  "status": "execution_ready_not_certified",
+  "certified": false,
+  "reason": "Official Engine SDK execution and real RGS staging evidence are still required.",
+  "upstream_revision_must_be_recorded": true
+}
