@@ -44,7 +44,7 @@ jobs:
           ref: ${{ inputs.web_sdk_ref }}
           path: .vendor/web-sdk
 
-      - name: Record SDK revisions
+      name: Record SDK revisions
         run: |
           {
             echo "Math SDK revision:"
