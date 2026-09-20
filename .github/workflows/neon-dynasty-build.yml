@@ -38,7 +38,11 @@ jobs:
       - name: Check game layout
         run: |
           python3 game/tools/official_layout_preflight.py
-
+      - name: Link SDKs for compatibility preflight
+        run: |
+          mkdir -p game/.vendor
+          ln -sfn ../../.vendor/math-sdk game/.vendor/math-sdk
+          ln -sfn ../../.vendor/web-sdk game/.vendor/web-sdk
       - name: Check SDK compatibility
         run: |
           python3 game/tools/official_sdk_compatibility_preflight.py
