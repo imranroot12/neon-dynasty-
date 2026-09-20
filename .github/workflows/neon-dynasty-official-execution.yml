@@ -1,0 +1,91 @@
+name: Neon Dynasty - Official Engine Execution
+
+on:
+  workflow_dispatch:
+    inputs:
+      math_sdk_ref:
+        description: "Engine Math SDK ref"
+        required: true
+        default: "main"
+      web_sdk_ref:
+        description: "Engine Web SDK ref"
+        required: true
+        default: "main"
+
+permissions:
+  contents: read
+
+jobs:
+  official-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Neon Dynasty
+        uses: actions/checkout@v4
+        with:
+          path: game
+
+      - name: Preflight source layout
+        working-directory: game
+        run: |
+          python3 tools/official_layout_preflight.py
+
+      - name: Checkout official Math SDK
+        uses: actions/checkout@v4
+        with:
+          repository: engineio/math-sdk
+          ref: ${{ inputs.math_sdk_ref }}
+          path: .vendor/math-sdk
+
+      - name: Checkout official Web SDK
+        uses: actions/checkout@v4
+        with:
+          repository: engineio/web-sdk
+          ref: ${{ inputs.web_sdk_ref }}
+          path: .vendor/web-sdk
+
+      - name: Record official SDK revisions
+        run: |
+          echo "MATH_SDK_REV=$(git -C .vendor/math-sdk rev-parse HEAD)" >> "$GITHUB_ENV"
+          echo "WEB_SDK_REV=$(git -C .vendor/web-sdk rev-parse HEAD)" >> "$GITHUB_ENV"
+
+          {
+            echo "Math SDK revision:"
+            git -C .vendor/math-sdk rev-parse HEAD
+            echo
+            echo "Web SDK revision:"
+            git -C .vendor/web-sdk rev-parse HEAD
+          } | tee sdk-revisions.txt
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Verify official SDK compatibility
+        working-directory: game
+        run: |
+          python3 tools/official_sdk_compatibility_preflight.py \
+            --math-sdk ../.vendor/math-sdk \
+            --web-sdk ../.vendor/web-sdk
+
+      - name: Install Math SDK dependencies
+        working-directory: .vendor/math-sdk
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+          if [ -f pyproject.toml ]; then
+            pip install -e .
+          fi
+
+      - name: Install Neon Dynasty into official
