@@ -20,7 +20,7 @@ class GameConfig(Config):
 
     def __init__(self):
         super().__init__()
-        self.game_id = "neon_dynasty"
+        self.game_id = "0_0_neon"
         self.provider_number = 0
         self.provider_name = "Voltix Games"
         self.game_name = "Neon Dynasty"
